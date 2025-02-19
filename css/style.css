@@ -18,15 +18,44 @@ html{
   background-color: var(--color-secondary);
 }
 
+/* BODY NO TIENE MARGEN, NO ES UNA CAJA COMO LOS OTROS. */
 body{}
 
-#container{}
+#container{
+  /* EL MOVIL NUNCA VA A LLEGAR A UN MÁXIMO DE 1200PX */
+  width:100%;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  display: grid;
+  /* grid-template-column no sirve poruqe solo hay una columna */
+  grid-template-rows: 100px auto auto;
+}
+
+header, main, footer{
+    padding: 1rem;
+  }
 
 /* HEADER */
 header{}
 
 /* MAIN */
-main{}
+main{
+ &__banner{
+  display:none;
+  /* la medida de un iPad en vertical es 768px */
+  @media screen and (min-width: 768px){
+    /* metemos la img como bloque */
+    display: block;
+    height: 500px;
+    object-fit: cover;
+    object-position: center;
+  }
+ }
+}
 
 /* FOOTER */
-footer{}
+footer{
+  grid-area: footer;
+}
+
