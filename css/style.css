@@ -18,7 +18,7 @@ html{
   background-color: var(--color-secondary);
 }
 
-/* BODY NO TIENE MARGEN, NO ES UNA CAJA COMO LOS OTROS. */
+/* BODY NO TIENE MARGEN, NO ES UNA CAJA COMO LOS OTROS */
 body{}
 
 #container{
@@ -28,7 +28,7 @@ body{}
   margin: 0 auto;
 
   display: grid;
-  /* grid-template-column no sirve poruqe solo hay una columna */
+  /* grid-template-column no sirve porque solo hay una columna */
   grid-template-rows: 100px auto auto;
 }
 
@@ -55,7 +55,5 @@ main{
 }
 
 /* FOOTER */
-footer{
-  grid-area: footer;
-}
+footer{}
 
